@@ -8,8 +8,13 @@ header {
   text-align: center;
 }
 h1 {
-  color: rgba(0,0,0,0.9);
+  /*color: rgba(0,0,0,0.9);*/
+  color: white;
   font-weight: bold;
+}
+
+p {
+  color: white;
 }
 .slogan {
   color: rgba(89,89,89,0.7);
