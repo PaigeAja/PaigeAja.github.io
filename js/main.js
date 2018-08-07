@@ -84,60 +84,68 @@ window.onload = function() {
   document.body.appendChild(css);
 };
 
-//Change Image on Hover 
-
-$(document).ready(function() {
-$('footer a#hov').hover(
-    function(){
-        $(this).addClass('mouseover');
-        $('.blc-2 img').attr('src', 'img/azure.png');
-    },
-    function(){
-        $(this).removeClass('mouseoff');
-        $('.blc-2 img').attr('src', 'img/07w.jpg');
-    }
-);
-$('footer a#hov2').hover(
-    function(){
-        $(this).addClass('mouseover');
-        $('.blc-2 img').attr('src', 'img/bcmobile.png');
-    },
-    function(){
-        $(this).removeClass('mouseoff');
-        $('.blc-2 img').attr('src', 'img/07w.jpg');
-    }
-);
-$('footer a#hov3').hover(
-    function(){
-        $(this).addClass('mouseover');
-        $('.blc-2 img').attr('src', 'img/escdesktop.png');
-    },
-    function(){
-        $(this).removeClass('mouseoff');
-        $('.blc-2 img').attr('src', 'img/07w.jpg');
-    }
-);
-$('footer a#hov4').hover(
-    function(){
-        $(this).addClass('mouseover');
-        $('.blc-2 img').attr('src', 'img/jpmobileview.png');
-    },
-    function(){
-        $(this).removeClass('mouseoff');
-        $('.blc-2 img').attr('src', 'img/07w.jpg');
-    }
-);
-});
 
 // Remove Typewrite and Additional Text on Hover - Homepage
     $(function(){
       // When your search icon is hovered over, display the search box
       $("footer a").hover(function(){
         // Display the search box
-        $(".blc-1, .blc-2 p").hide();
+        $(".blc-sq-2 p").hide();
       }, function(){
         // Hide it when the container is moused out of
-        $(".blc-1, .blc-2 p").show();
+        $(".blc-sq-2 p").show();
       });
    });
+
+
+   $(function(){
+      // When your search icon is hovered over, display the search box
+      $("footer a").hover(function(){
+        // Display the search box
+        $(".blc-sq-2 img").show();
+      }, function(){
+        // Hide it when the container is moused out of
+        $(".blc-sq-2 img").hide();
+      });
+   });
+
+
+//Change Image on Hover 
+
+$(document).ready(function(){
+  $('footer a#hov2').hover(
+    function(){
+      $(this).addClass('mouseover');
+      $('.blc-sq-2 img').attr('src', 'img/cdmobile.png');
+    },
+    function(){
+      // $(this).removeClass('mouseoff');
+      $('blc-sq-2 img').hide();
+    }
+  );
+
+  $('footer a#hov4').hover(
+    function(){
+      $(this).addClass('mouseover');
+      $('.blc-sq-2 img').attr('src', 'img/jp-08.png');
+    },
+    function(){
+      // $(this).removeClass('mouseoff');
+      $('blc-sq-2 img').hide();
+    }
+  );
+
+  $('footer a#hov5').hover(
+    function(){
+      $(this).addClass('mouseover');
+      $('.blc-sq-2 img').attr('src', 'img/19.png');
+    },
+    function(){
+      // $(this).removeClass('mouseoff');
+      $('blc-sq-2 img').hide();
+    }
+  );
+
+});
+
 

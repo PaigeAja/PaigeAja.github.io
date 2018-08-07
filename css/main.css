@@ -221,8 +221,12 @@ header {
     position: relative;
 }
 
-.cd-half-block {
+.cd-half-block: first-of-type {
   margin: 5em 0 0;
+}
+
+.cd-half-block: nd-of-type {
+  margin-top: 1em;
 }
 
 .mobile-header nav div a {
@@ -304,47 +308,74 @@ address .cd-contact-info {
     font-family: 'Antro_Vectra.otf';
 }
 
+#mb-hm-pg h2 a{
+  color: white;
+
+}
+
+#mb-hm-pg .header-symbol.btn-menu i.material-icons{
+  color: white;
+}
+
 /* Home Page */
-#blc {
-  text-align: center;
-  margin: 0 2em;
-}
 
-.blc-1 {
-  width: 50%;
-  /*position: absolute;*/
-}
-
-.blc-1 h2 {
+.blc {
   display: none;
 }
 
-.blc-1 p {
-  font-size: 1.3em;
+.mb-blc {
+  background: #343434;
+  height: -webkit-fill-available;
 }
 
-.blc-1 p span {
-  font-size: inherit;
+.mb-blc-1 .mb-blc-sq {
+  padding: 2% 0;
 }
 
-.blc-2 {
-  width: 85%;
+.mb-blc-1 .mb-blc-sq p {
+  font-size: 2em;
+  color: white;
+  margin-left: 5%;
 }
 
-.blc-2 img {
-  width: 100%;
-  margin: 1.5em 0;
+.mb-blc-1 .mb-blc-sq p span {
+  font-size: 1em;
 }
 
-.blc-2 p {
-  position: relative;
-  /*top: -2em;*/
-  left: 4em;
-  /*background: #2D607C;*/
-  color: inherit;
-  width: 80%;
-  padding: .5em;
-  /*width: 40%;*/
+.mb-blc-sq-1 {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 45%;
+  left: -22%;
+}
+
+.mb-blc-sq-1 p {
+  color: white;
+}
+
+.mb-blc-sq-1 p a {
+  color: #2D607C;
+}
+
+.mb-blc-2 {
+  width: 75vw;
+  height: 75vw;
+  display: inline-block;
+  background: url("../img/18.png") no-repeat center right;
+  background-size: cover;
+  background-position: 100%;
+  margin-left: 20%;
+}
+
+.mb-blc-3 .mb-blc-sq-2 {
+  margin-top: 5%;
+  width: 65%;
+  margin-left: 35%;
+  text-align: center;
+}
+
+.mb-blc-3 .mb-blc-sq-2 p {
+  color: white;
 }
 
 footer {
@@ -381,6 +412,10 @@ span {
     padding: 0 1.5em;
 }
 
+.half-width-one a {
+  color: #2D607C;
+}
+
 /* Work Page */
 
 .row {
@@ -390,9 +425,9 @@ span {
 }
 
 .row img {
-        /*width: 550px;*/
-        width: 100%;
+        width: auto;
         height: 350px;
+        margin: 0 auto;
     }
 
 .container {
@@ -438,10 +473,25 @@ span {
   text-align: center;
 }
 
+.row:nth-of-type(2) .container {
+  background: #343434;  
+}
+
+.row:nth-of-type(2) .container p.arrv {
+  padding: 3em 0;
+  font-size: 3em;
+  color: white;
+}
+
 /* Project Pages */
 .hero-projects {
-  height: 350px;
-  border: 1px solid #ccc;
+  /*height: 350px;*/
+  text-align: center;
+  height: 55vw;
+}
+
+.hero-projects img {
+  width: 100%;
 }
 
 #intro {
@@ -467,10 +517,26 @@ span {
 
 .sqs-2 div {
   height: 350px;
-  border: 1px solid #ccc;
-  margin: 1em 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
+#cr, #cr-1, #cr-2 {
+  height:55vw;
+}
+
+#cr img, #cr-1 img, #cr-2 img {
+  height: 100%;
+}
+
+#pr, #pr-1, #pr-2 {
+  height:55vw;
+}
+
+#pr img, #pr-1 img, #pr-2 img {
+  height: 100%;
+}
 
 
 /* Contact Page */
@@ -481,6 +547,10 @@ span {
 
 .cct p {
   line-height: 1.8em;
+}
+
+.cct p a {
+  color: #2D607C;
 }
 
 .ccform {
@@ -626,37 +696,105 @@ span {
 @media only screen and (min-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
 
+    /* Header Style */
+    #mb-hm-pg h2 a {
+      color: #424144;
+    }
+
     /* Main Page */
-    .blc-1 h2 {
+
+    .mb-blc {
       display: none;
     }
 
-    .blc-1 p {
-      font-size: 1.5em;
-      /*color: black;*/
-      /*position: relative;*/
-      left: 2em;
-      top: 2em;
-    }
-
-    .blc-2 {
-      text-align: center;
-      margin-bottom: 5em;
-    }
-
-    .blc-2 img {
-      margin: 0;
-      width: auto;
-    }
-
-    .blc-2 p {
-      width: 250px;
-      background: #2D607C;
+    #hm-pg a{
       color: white;
-      padding: .8em;
+    }
+
+    .blc {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
       position: absolute;
-      left: 25em;
-      top: 34em;
+      top: 0;
+      height: -webkit-fill-available;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .blc-1, .blc-2, .blc-3 {
+      width: 33.3%;
+      height: 100%;
+      justify-content: center;
+      align-self: center;
+
+    }
+
+    .blc-sq {
+      position: relative;
+      left: 25%;
+      top: 28%;
+      width: 350px;
+      font-weight: bolder;
+
+    }
+
+    .blc-sq p {
+      color: #2D607C;
+      font-size: 2.5em;
+    }
+
+    .blc-sq p span {
+      font-size: 1em;
+      z-index: 1;
+    }
+
+    .blc-sq-1 {
+      transform: rotate(270deg);
+      color: white;
+      position: relative;
+      top: 65%;
+      left: 45%;
+    }
+
+    .blc-sq-1 p {
+      transform: rotate(180deg);
+      color: white;
+      font-size: 1.2em;
+    }
+
+    .blc-sq-1 p a {
+      color: #2D607C;
+    }
+
+   .blc-2 {
+    background: url("../img/18.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -8.5em;
+    /*background-position: -5em;*/
+
+   }
+    
+    .blc-sq-2 {
+      width: 250px;
+      height: 250px;
+      text-align: center;
+      margin: 80% 10%;
+      padding: 1.5em;
+    }
+
+    .blc-sq-2 p{
+      color: white;
+    }
+
+    .blc-sq-2 img {
+      display: none;
+      width: 25%;
+      height: 35%;
+      position: absolute;
+      top: 30%;
+      left: 72%;
     }
 
     footer {
@@ -668,6 +806,17 @@ span {
      footer a {
         display: inline;
         padding:.5em;
+    }
+
+     #hm-ftr {
+      position: fixed;
+      top: 92%;
+      left: 66%;
+      width: 33.3%;
+    }
+
+    #hm-ftr a{
+      color: white;
     }
 
      footer a:hover {
@@ -705,19 +854,25 @@ span {
       margin: 2em 0;
     }
 
+    .row:nth-of-type(2) {
+      justify-content: flex-start;
+      margin-left: 2em;
+    }
+
     .row img {
-        /*width: 550px;*/
-        width: 45%;
+        width: auto;
         height: 350px;
     }
 
     .container {
       position: relative;
       width: 45%;
-      /*width: 550px;*/
       border: 1px solid #ccc;
     }
 
+    .row:nth-of-type(2) .container{
+      width: 46.5%;
+    }
 
     .image {
       display: block;
@@ -727,10 +882,14 @@ span {
  
   /* Project Pages */
   .hero-projects {
-    border: 1px solid #ccc;
-    width: 95%;
-    height: 450px;
-    margin: 2em;
+    height: 56.3vw;
+    width: 55vw;
+  }
+
+  .hero-projects img {
+    height: -webkit-fill-available;
+    width: auto;
+    
   }
 
   .title {
@@ -762,6 +921,11 @@ span {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 2em;
+    margin-left: 2em;
+  }
+
+  .sqs-bl h3 {
+    margin-top: 0;
   }
 
   .sqs-bl h2 {
@@ -779,16 +943,28 @@ span {
   }
 
   .sqs-2 div {
-    width: 95%;
-    height: 450px;
-    margin: 2em;
-    border: 1px solid #ccc;
-  }
-
-  .sqs-2 div img {
     width: 100%;
   }
 
+  #cr, #cr-1, #cr-2 {
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+  }
+
+  #cr img, #cr-1 img, #cr-2 img {
+    width: 100%;
+  }
+
+   #pr, #pr-1, #pr-2 {
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+  }
+
+  #pr img, #pr-1 img, #pr-2 img {
+    width: 100%;
+  }
 
     /* Contact Page */
 
@@ -823,6 +999,8 @@ span {
         justify-content: space-between;
         height: 75px;
         margin: 1em 2em 0;
+        position: relative;
+        z-index: 1;
     }
 
     header h2, header nav {
@@ -851,62 +1029,37 @@ span {
 
     /* Homepage*/
 
-    .blc {
-      margin-bottom: 1em;
+    .blc-sq {
+      left: 45%;
+      top: 25%;
+      width: 350px;
     }
 
-    .blc-1 {
-      width: 250px;
-      height: 120px;
-      position: absolute;
-      left: 8em;
-      top: 25em;
-      padding: 1em;
-      text-align: center;
-      background: #2D607C;
-
-    }   
-
-    .blc-1 h2 {
-      display: block;
-      color: white;
-      font-family: 'Gudea', sans-serif;
-    }
-
-    .blc-1 p {
-      font-size: 1.2em;
-      left: 0;
-      top: 0;
-      color: white;
+    .blc-sq-1 {
+      top: 68%;
+      left: 45%;
     }
 
     .blc-2 {
-      margin: 0 4em;
-      position: relative;
-      z-index: -1;
-      width: 80%;
-      border: 2px solid transparent;
-      text-align: center;
-    } 
-
-    .blc-2 img {
-      /*position: relative;
-      left: 20em;*/
+      background-position: -5em;
     }
 
-    .blc-2 p {
-      width: 40%;
+    .blc-sq-2 {
+      margin: 15em 5em;
+    }
+
+    .blc-sq-2 img {
+      width: 300px;
+      height: 300px;
       position: absolute;
-      top: 25em;
-      left: 20em;
-      color: white;
-      background: transparent;
+      top: 14em;
+      left: 58.3em;
+      display: none;
     }
-
+    
     footer { 
       position: relative;
       top: 1em;
-      /*margin-top: 2em;*/
       text-align: center;
      }
 
@@ -914,66 +1067,76 @@ span {
        margin: 1em;
      }
 
+     #hm-ftr {
+      position: fixed;
+      /*top: 38em;
+      left: 53.25em;*/
+      width: 33.3%;
+    }
+
+     #hm-ftr a{
+      margin: 0;
+      color: white;
+    }
+
      /* Project Pages */
      .hero-projects {
-      height: 500px;
-     }
+      border: none;
+      text-align: center;
+      /*width: 100%;
+      height: 600px;*/
+      margin: auto 0;
+    }
 
-    .sqs-2 div {
-      height: 500px;
-     }
+    #intro {
+      margin-top: 4.5em;
+    }
+
+    .sqs-bl {
+      margin: 2em;
+    }
+
+    .sqs-2 #cr, #cr-1, #cr-2, #cr-3 {
+      height: 600px;
+   }
+
+    .sqs-2 #pr, #pr-1, #pr-2, #pr-3 {
+      height: 600px;
+    }
+
+    .sqs-2 #pr-2 {
+      margin-bottom: 2em;
+    }
 
 
  }  
 
+
+ @media only screen and (min-width: 1068px) {
+  .blc-sq-1 {
+    top: 70%;
+  }
+ }
+
 @media only screen and (min-width: 1280px) and (min-height: 800px){
 
-  .blc-1 {
-    left: 12em;
-    top: 30em;
-  }
-
   .blc-2 {
-    height: 650px;
+    background-position: 40%;
   }
 
-  .blc-2 img {
-    height: inherit;
-    position: relative;
-    left: 5em;
+  .blc-3 .blc-sq-2 {
+    margin: 65% auto;
   }
 
-  .blc-2 p {
-    top: 34em;
-    left: 23em;
-  }
 
 }
   
 
 @media only screen and (min-width: 1400px) {  
-  /* Homepage*/
 
-  .blc-1 {
-    left: 12em;
-    top: 30em;
+  .blc-3 .blc-sq-2 img {
+    left: 65em;
   }
-
-  .blc-2 {
-    height: 720px;
-  }
-
-  .blc-2 img {
-    height: inherit;
-    position: relative;
-    left: 5em;
-  }
-
-  .blc-2 p {
-    top: 38em;
-    left: 25em;
-  }
-
 }
   
    
