@@ -343,10 +343,9 @@ address .cd-contact-info {
 }
 
 .mb-blc-sq-1 {
-  position: absolute;
-  transform: rotate(90deg);
-  top: 45%;
-  left: -22%;
+  position: relative;
+  margin-bottom: 2%;
+  margin-left: 5%;
 }
 
 .mb-blc-sq-1 p {
@@ -358,20 +357,18 @@ address .cd-contact-info {
 }
 
 .mb-blc-2 {
-  width: 75vw;
-  height: 75vw;
+  width: 70vw;
+  height: 70vw;
   display: inline-block;
   background: url("../img/18.png") no-repeat center right;
   background-size: cover;
   background-position: 100%;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 
 .mb-blc-3 .mb-blc-sq-2 {
-  margin-top: 5%;
-  width: 65%;
-  margin-left: 35%;
-  text-align: center;
+  margin: 5%;
+  width: 50%;
 }
 
 .mb-blc-3 .mb-blc-sq-2 p {
@@ -750,15 +747,16 @@ span {
     }
 
     .blc-sq-1 {
-      transform: rotate(270deg);
       color: white;
       position: relative;
-      top: 65%;
-      left: 45%;
+      top: 60%;
+      left: 44%;
+      transform: rotate(90deg);
+      white-space: nowrap;
+
     }
 
     .blc-sq-1 p {
-      transform: rotate(180deg);
       color: white;
       font-size: 1.2em;
     }
@@ -1016,7 +1014,7 @@ span {
 
     header nav {
         /*width: 30%;*/
-        padding: 0 2em;
+        padding: 0 1em;
         word-spacing: 2em;
     }
 
@@ -1036,6 +1034,7 @@ span {
     }
 
     .blc-sq-1 {
+
       top: 68%;
       left: 45%;
     }
@@ -1110,13 +1109,6 @@ span {
 
 
  }  
-
-
- @media only screen and (min-width: 1068px) {
-  .blc-sq-1 {
-    top: 70%;
-  }
- }
 
 @media only screen and (min-width: 1280px) and (min-height: 800px){
 
