@@ -334,7 +334,7 @@ address .cd-contact-info {
 
 .mb-blc-1 .mb-blc-sq p {
   font-size: 2em;
-  color: white;
+  color: #2D607C;
   margin-left: 5%;
 }
 
@@ -678,16 +678,6 @@ span {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-/*@media only screen and (min-width: 520px) {
-
-  .blc-2 img {
-    width: 80%;
-  }
-
-  .blc-2 p {
-    width: 65%;
-  }
-}*/
 
 
 @media only screen and (min-width: 768px) {
@@ -859,7 +849,7 @@ span {
 
     .row img {
         width: auto;
-        height: 350px;
+        height: 90%;
     }
 
     .container {
@@ -1110,6 +1100,28 @@ span {
 
  }  
 
+ @media only screen and (min-width: 768px) and (min-height: 1020px) {
+  .blc-2 {
+    background-position: 48%;
+  }
+
+  .blc-3 .blc-sq-2 {
+    margin: 150% 4%;
+  }
+ }
+
+ @media only screen and (min-width: 800px) and (min-height: 1280px) {
+  .blc-2 {
+    background-position: 48%;
+  }
+ }
+
+ @media only screen and (min-width: 1020px) and (min-height: 1300px) {
+   .blc-3 .blc-sq-2 {
+     margin: 150% 15%;
+   }
+ }
+
 @media only screen and (min-width: 1280px) and (min-height: 800px){
 
   .blc-2 {
@@ -1119,7 +1131,6 @@ span {
   .blc-3 .blc-sq-2 {
     margin: 65% auto;
   }
-
 
 }
   
